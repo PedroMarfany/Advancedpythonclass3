@@ -1,14 +1,36 @@
-""""
-Script to Make updates in Github
+"""
+Script to make updates in github
 """
 
-import pandas as pandas
+import pandas as pd
+import click
 
-def main():
+class FilteringClass:
     """
-    Main Function
+    Class for filtering
     """
-    pass
 
- if _name_ == "_main_":
+    def _init_(self,df):
+        self.df = df
+
+    def filter_price(self, price):
+        """
+        Filter price
+        """
+        return self.df[self.df['Price Starting With ($)'] < price]
+
+@click.command(short_help='Parser to import datset')
+@click.option('-f', '--file_name', required=True, help='File to import')
+def main(file_name):
+    """
+    Main function
+    """
+    df = pd.read_csv(file_name)
+    
+    
+    result = FilteringClass(df).filter_price(12)
+    
+    print(result.shape)
+
+if _name_ == "_main_":
     main()
