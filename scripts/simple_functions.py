@@ -1,0 +1,16 @@
+"""
+Script to write sum and substract functions
+"""
+
+
+def sum_two_nums(x,y):
+    """
+    Sum two numbers
+    """
+    return x + y
+
+def sub_two_nums(x,y):
+    """
+    Substract two numbers
+    """
+    return x - y
