@@ -5,6 +5,7 @@ Script to make updates in github
 import pandas as pd
 import click
 
+<<<<<<< Updated upstream
 class FilteringClass:
     """
     Class for filtering
@@ -19,6 +20,8 @@ class FilteringClass:
         """
         return self.df[self.df['Price Starting With ($)'] < price]
 
+=======
+>>>>>>> Stashed changes
 @click.command(short_help='Parser to import datset')
 @click.option('-f', '--file_name', required=True, help='File to import')
 def main(file_name):
