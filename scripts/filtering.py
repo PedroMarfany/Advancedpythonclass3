@@ -43,5 +43,5 @@ def main(file_name):
     
     print(result.shape)
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     main()
